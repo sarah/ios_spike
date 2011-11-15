@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		268ADF541473251300BBCF9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF531473251300BBCF9F /* UIKit.framework */; };
+		268ADF561473251300BBCF9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF551473251300BBCF9F /* Foundation.framework */; };
+		268ADF581473251300BBCF9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF571473251300BBCF9F /* CoreGraphics.framework */; };
+		268ADF5E1473251300BBCF9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 268ADF5C1473251300BBCF9F /* InfoPlist.strings */; };
+		268ADF601473251300BBCF9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268ADF5F1473251300BBCF9F /* main.m */; };
+		268ADF641473251300BBCF9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268ADF631473251300BBCF9F /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		268ADF4F1473251300BBCF9F /* spike8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spike8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		268ADF531473251300BBCF9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		268ADF551473251300BBCF9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		268ADF571473251300BBCF9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		268ADF5B1473251300BBCF9F /* spike8-Info.plist */ = {isa = PBXFileReference; path = "spike8-Info.plist"; sourceTree = "<group>"; };
+		268ADF5D1473251300BBCF9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		268ADF5F1473251300BBCF9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		268ADF611473251300BBCF9F /* spike8-Prefix.pch */ = {isa = PBXFileReference; path = "spike8-Prefix.pch"; sourceTree = "<group>"; };
+		268ADF621473251300BBCF9F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		268ADF631473251300BBCF9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		268ADF4C1473251300BBCF9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268ADF541473251300BBCF9F /* UIKit.framework in Frameworks */,
+				268ADF561473251300BBCF9F /* Foundation.framework in Frameworks */,
+				268ADF581473251300BBCF9F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		268ADF441473251300BBCF9F = {
+			isa = PBXGroup;
+			children = (
+				268ADF591473251300BBCF9F /* spike8 */,
+				268ADF521473251300BBCF9F /* Frameworks */,
+				268ADF501473251300BBCF9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		268ADF501473251300BBCF9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				268ADF4F1473251300BBCF9F /* spike8.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		268ADF521473251300BBCF9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				268ADF531473251300BBCF9F /* UIKit.framework */,
+				268ADF551473251300BBCF9F /* Foundation.framework */,
+				268ADF571473251300BBCF9F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		268ADF591473251300BBCF9F /* spike8 */ = {
+			isa = PBXGroup;
+			children = (
+				268ADF621473251300BBCF9F /* AppDelegate.h */,
+				268ADF631473251300BBCF9F /* AppDelegate.m */,
+				268ADF5A1473251300BBCF9F /* Supporting Files */,
+			);
+			path = spike8;
+			sourceTree = "<group>";
+		};
+		268ADF5A1473251300BBCF9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				268ADF5B1473251300BBCF9F /* spike8-Info.plist */,
+				268ADF5C1473251300BBCF9F /* InfoPlist.strings */,
+				268ADF5F1473251300BBCF9F /* main.m */,
+				268ADF611473251300BBCF9F /* spike8-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		268ADF4E1473251300BBCF9F /* spike8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 268ADF671473251300BBCF9F /* Build configuration list for PBXNativeTarget "spike8" */;
+			buildPhases = (
+				268ADF4B1473251300BBCF9F /* Sources */,
+				268ADF4C1473251300BBCF9F /* Frameworks */,
+				268ADF4D1473251300BBCF9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = spike8;
+			productName = spike8;
+			productReference = 268ADF4F1473251300BBCF9F /* spike8.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		268ADF461473251300BBCF9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "fabled net";
+			};
+			buildConfigurationList = 268ADF491473251300BBCF9F /* Build configuration list for PBXProject "spike8" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 268ADF441473251300BBCF9F;
+			productRefGroup = 268ADF501473251300BBCF9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				268ADF4E1473251300BBCF9F /* spike8 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		268ADF4D1473251300BBCF9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268ADF5E1473251300BBCF9F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		268ADF4B1473251300BBCF9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268ADF601473251300BBCF9F /* main.m in Sources */,
+				268ADF641473251300BBCF9F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		268ADF5C1473251300BBCF9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				268ADF5D1473251300BBCF9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		268ADF651473251300BBCF9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		268ADF661473251300BBCF9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		268ADF681473251300BBCF9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "spike8/spike8-Prefix.pch";
+				INFOPLIST_FILE = "spike8/spike8-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		268ADF691473251300BBCF9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "spike8/spike8-Prefix.pch";
+				INFOPLIST_FILE = "spike8/spike8-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		268ADF491473251300BBCF9F /* Build configuration list for PBXProject "spike8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268ADF651473251300BBCF9F /* Debug */,
+				268ADF661473251300BBCF9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		268ADF671473251300BBCF9F /* Build configuration list for PBXNativeTarget "spike8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268ADF681473251300BBCF9F /* Debug */,
+				268ADF691473251300BBCF9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 268ADF461473251300BBCF9F /* Project object */;
+}
