@@ -13,6 +13,11 @@
 		268ADF5E1473251300BBCF9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 268ADF5C1473251300BBCF9F /* InfoPlist.strings */; };
 		268ADF601473251300BBCF9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268ADF5F1473251300BBCF9F /* main.m */; };
 		268ADF641473251300BBCF9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268ADF631473251300BBCF9F /* AppDelegate.m */; };
+		268ADF6C1473253300BBCF9F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF6A1473253300BBCF9F /* libz.dylib */; };
+		268ADF6D1473253300BBCF9F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF6B1473253300BBCF9F /* Security.framework */; };
+		268ADF6F1473253F00BBCF9F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF6E1473253F00BBCF9F /* libstdc++.dylib */; };
+		268ADF741473259F00BBCF9F /* Couchbase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF721473259F00BBCF9F /* Couchbase.framework */; };
+		268ADF751473259F00BBCF9F /* CouchCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268ADF731473259F00BBCF9F /* CouchCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +25,17 @@
 		268ADF531473251300BBCF9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		268ADF551473251300BBCF9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		268ADF571473251300BBCF9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		268ADF5B1473251300BBCF9F /* spike8-Info.plist */ = {isa = PBXFileReference; path = "spike8-Info.plist"; sourceTree = "<group>"; };
+		268ADF5B1473251300BBCF9F /* spike8-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "spike8-Info.plist"; sourceTree = "<group>"; };
 		268ADF5D1473251300BBCF9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		268ADF5F1473251300BBCF9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		268ADF611473251300BBCF9F /* spike8-Prefix.pch */ = {isa = PBXFileReference; path = "spike8-Prefix.pch"; sourceTree = "<group>"; };
-		268ADF621473251300BBCF9F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		268ADF611473251300BBCF9F /* spike8-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "spike8-Prefix.pch"; sourceTree = "<group>"; };
+		268ADF621473251300BBCF9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		268ADF631473251300BBCF9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		268ADF6A1473253300BBCF9F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		268ADF6B1473253300BBCF9F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		268ADF6E1473253F00BBCF9F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		268ADF721473259F00BBCF9F /* Couchbase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Couchbase.framework; path = Frameworks/Couchbase.framework; sourceTree = "<group>"; };
+		268ADF731473259F00BBCF9F /* CouchCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchCocoa.framework; path = Frameworks/CouchCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,9 +43,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268ADF6F1473253F00BBCF9F /* libstdc++.dylib in Frameworks */,
+				268ADF6C1473253300BBCF9F /* libz.dylib in Frameworks */,
+				268ADF6D1473253300BBCF9F /* Security.framework in Frameworks */,
 				268ADF541473251300BBCF9F /* UIKit.framework in Frameworks */,
 				268ADF561473251300BBCF9F /* Foundation.framework in Frameworks */,
 				268ADF581473251300BBCF9F /* CoreGraphics.framework in Frameworks */,
+				268ADF741473259F00BBCF9F /* Couchbase.framework in Frameworks */,
+				268ADF751473259F00BBCF9F /* CouchCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,7 @@
 				268ADF591473251300BBCF9F /* spike8 */,
 				268ADF521473251300BBCF9F /* Frameworks */,
 				268ADF501473251300BBCF9F /* Products */,
+				268ADF701473254400BBCF9F /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +78,9 @@
 		268ADF521473251300BBCF9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				268ADF721473259F00BBCF9F /* Couchbase.framework */,
+				268ADF731473259F00BBCF9F /* CouchCocoa.framework */,
+				268ADF6B1473253300BBCF9F /* Security.framework */,
 				268ADF531473251300BBCF9F /* UIKit.framework */,
 				268ADF551473251300BBCF9F /* Foundation.framework */,
 				268ADF571473251300BBCF9F /* CoreGraphics.framework */,
@@ -90,6 +109,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		268ADF701473254400BBCF9F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				268ADF6E1473253F00BBCF9F /* libstdc++.dylib */,
+				268ADF6A1473253300BBCF9F /* libz.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +128,7 @@
 				268ADF4B1473251300BBCF9F /* Sources */,
 				268ADF4C1473251300BBCF9F /* Frameworks */,
 				268ADF4D1473251300BBCF9F /* Resources */,
+				268ADF711473255200BBCF9F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -146,6 +175,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		268ADF711473255200BBCF9F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -a \"${SRCROOT}/Frameworks/Couchbase.framework/CouchbaseResources\"  \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		268ADF4B1473251300BBCF9F /* Sources */ = {
@@ -219,6 +264,10 @@
 		268ADF681473251300BBCF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spike8/spike8-Prefix.pch";
 				INFOPLIST_FILE = "spike8/spike8-Info.plist";
@@ -230,6 +279,10 @@
 		268ADF691473251300BBCF9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spike8/spike8-Prefix.pch";
 				INFOPLIST_FILE = "spike8/spike8-Info.plist";

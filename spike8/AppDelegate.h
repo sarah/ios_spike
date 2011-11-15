@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CouchDatabase;
+@class CouchPersistentReplication;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) CouchPersistentReplication *pullRequest;
+@property (nonatomic, retain) CouchDatabase *localCouch;
 
+-(void) performRemoteSync;
+-(void) listQuestions;
 @end

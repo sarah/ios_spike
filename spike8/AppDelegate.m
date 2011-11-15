@@ -7,20 +7,91 @@
 //
 
 #import "AppDelegate.h"
+#import "CouchCocoa/CouchCocoa.h"
+#import "Couchbase/CouchbaseMobile.h"
+
+#define kDatabaseName @"spike459"
+#define kRemoteSyncURL @"http://microtrendiary.iriscouch.com/microtrendiary_test/"
+#define kQuestionFilter @"todays_question/questions"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize localCouch, pullRequest;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    CouchEmbeddedServer *server = [[CouchEmbeddedServer alloc]init];
+    [server start: ^{
+        if(server.error)
+        {
+            NSLog(@"There was an error: %@", server.error);
+        }
+        
+        self.localCouch = [server databaseNamed:kDatabaseName];
+        NSError *error;
+        if(![self.localCouch ensureCreated:&error])
+        {
+            NSLog(@"Couldn't create db: %@", error);
+        } else {
+            NSLog(@"Created!");
+        }
+        
+        localCouch.tracksChanges = YES;
+        NSLog(@"Started server: %@ with db: %@", server, localCouch);
+        
+        [self performRemoteSync];
+    }];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+-(void) performRemoteSync
+{
+    NSURL *remoteURL = [NSURL URLWithString:kRemoteSyncURL];
+    NSLog(@"Going to perform remote sync with: %@", remoteURL);
+    self.pullRequest = [self.localCouch replicationFromDatabaseAtURL:remoteURL];
+    [pullRequest setContinuous: YES];
+    [pullRequest setFilter:nil];
+    NSLog(@"pullRequest: %@", pullRequest);
+    
+    [pullRequest addObserver:self forKeyPath:@"completed" options:0 context:NULL];
+    [self listQuestions];
+    
+}
+-(void) listQuestions
+{
+    CouchDesignDocument *designView = [self.localCouch designDocumentWithName:@"TodaysQuestion"];
+    [designView defineViewNamed:@"TodaysQuestion" 
+                             map:@"function(doc){if(doc.release_date)emit(doc.release_date,doc)};"];
+    
+    CouchQuery* query = [designView queryViewNamed:@"TodaysQuestion"];
+    query.descending = YES;
+    NSLog(@"About to do the query");
+    
+    for(CouchQueryRow *row in query.rows)
+    {
+        NSLog(@"key: %@, question: %@", row.key, [row.document propertyForKey:@"main_question"]);
+    }
+}
 
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if(object == pullRequest)
+    {
+        unsigned completed = pullRequest.completed;
+        unsigned total = pullRequest.total;
+        NSLog(@"completed: %u; total: %u", completed, total);
+        NSLog(@"SYNC progress: %u / %u", completed, total);
+        if(total > 0 && total == completed)
+        {
+            NSLog(@"Done syncing!");
+            [pullRequest removeObserver:self forKeyPath:@"completed"];
+        }
+    }
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
